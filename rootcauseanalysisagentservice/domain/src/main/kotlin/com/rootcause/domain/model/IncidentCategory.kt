@@ -1,0 +1,12 @@
+package com.rootcause.domain.model
+
+enum class IncidentCategory {
+    DEPENDENCY_FAILURE,
+    RESOURCE_EXHAUSTION,
+    CONFIGURATION_ERROR,
+    DEPLOYMENT_REGRESSION,
+    DATA_INCONSISTENCY,
+    TIMEOUTS,
+    AUTHENTICATION_AUTHORIZATION,
+    UNKNOWN
+}
