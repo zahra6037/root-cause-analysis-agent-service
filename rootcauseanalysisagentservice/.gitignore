@@ -23,3 +23,10 @@ Thumbs.db
 
 # Kotlin
 .kotlin/
+
+# Ignore local configuration files
+**/src/main/resources/application-local.yml
+
+# Ignore all local-specific yaml files
+**/src/main/resources/application-local.yml
+**/src/main/resources/application-local.properties
