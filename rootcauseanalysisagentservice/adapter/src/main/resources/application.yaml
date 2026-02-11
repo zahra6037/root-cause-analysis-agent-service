@@ -1,0 +1,41 @@
+spring:
+  application:
+    name: root-cause-analysis-agent-service
+
+server:
+  port: 8080
+
+# LangChain4j Configuration
+langchain4j:
+  open-ai:
+    chat-model:
+      api-key: ${OPENAI_API_KEY:}
+      model-name: gpt-4-turbo-preview
+      temperature: 0.3
+      max-tokens: 4000
+      log-requests: true
+      log-responses: true
+
+  anthropic:
+    chat-model:
+      api-key: ${ANTHROPIC_API_KEY:}
+      model-name: claude-sonnet-4-20250514
+      temperature: 0.3
+      max-tokens: 4000
+      log-requests: true
+      log-responses: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: always
+
+logging:
+  level:
+    com.rootcause: DEBUG
+    org.springframework: INFO
+    org.springframework.web: DEBUG
