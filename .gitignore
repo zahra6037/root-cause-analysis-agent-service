@@ -1,62 +1,32 @@
-# Compiled class file
-*.class
-
-# Log file
-*.log
-
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
-
-# virtual machine crash logs
-hs_err_pid*
-replay_pid*
-
-# Kotlin Gradle plugin data
-.kotlin/
-
 # Gradle
 .gradle/
 build/
-!gradle/wrapper/gradle-wrapper.jar
-gradle-app.setting
-!**/src/main/**/build/
-!**/src/test/**/build/
+/build/
+*/build/
 
 # IntelliJ IDEA
 .idea/
-*.iml
 *.iws
+*.iml
 *.ipr
 out/
-
-# Eclipse
-.classpath
-.project
-.settings/
 bin/
 
-# VS Code
-.vscode/
+# Keep the Gradle Wrapper
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
 
-# macOS
+# System Files
 .DS_Store
+Thumbs.db
 
-# Docker volumes (optional - depends if you want to persist data)
-docker/prometheus-data/
-docker/redpanda-data/
+# Kotlin
+.kotlin/
 
-# Environment files (if you add any)
-.env
-.env.local
+# Ignore local configuration files
+**/src/main/resources/application-local.yml
+
+# Ignore all local-specific yaml files
+**/src/main/resources/application-local.yml
+**/src/main/resources/application-local.properties
