@@ -78,5 +78,4 @@ curl --location 'http://localhost:8080/api/v1/analysis/trigger' \
 |---|---|---|
 | 404: model 'mistral' not found | The model hasn't been downloaded to Ollama. | Run ollama pull mistral in your terminal. |
 | Connection Refused | Ollama is not running. | Ensure the Ollama app is open and running in your taskbar. |
-| UnsatisfiedDependencyException | Row 2, Col 2 | Row 2, Col 3 |
 
