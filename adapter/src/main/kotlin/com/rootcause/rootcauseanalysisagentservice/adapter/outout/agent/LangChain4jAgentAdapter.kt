@@ -37,7 +37,7 @@ class LangChain4jAgentAdapter(
             reasoning = response.reasoning,
             affectedComponents = response.affectedComponents.toSet(),
             suggestedFixes = response.suggestedFixes.map {
-                com.rootcause.domain.model.SuggestedFix(
+               SuggestedFix(
                     description = it.description,
                     // Convert to UPPERCASE to match the Enum, and provide a fallback
                     priority = try {
@@ -65,31 +65,5 @@ class LangChain4jAgentAdapter(
         } + if (logs.size > 50) {
             "\n... (${logs.size - 50} more logs omitted)"
         } else ""
-    }
-
-    private fun parseAgentResponse(jsonResponse: String): AIAnalysisResult {
-        // Extract JSON from response (agent might include markdown)
-        val cleanJson = jsonResponse
-            .removePrefix("```json").removePrefix("```")
-            .removeSuffix("```")
-            .trim()
-
-        val analysis = objectMapper.readValue(cleanJson, AgentAnalysisResponse::class.java)
-
-        return AIAnalysisResult(
-            rootCause = analysis.rootCause,
-            reasoning = analysis.reasoning,
-            affectedComponents = analysis.affectedComponents.toSet(),
-            suggestedFixes = analysis.suggestedFixes.map {
-                SuggestedFix(
-                    description = it.description,
-                    priority = Priority.valueOf(it.priority),
-                    estimatedImpact = it.estimatedImpact
-                )
-            },
-            confidence = analysis.confidence,
-            tokensUsed = 0, // LangChain4j doesn't expose this directly
-            modelUsed = "ollama-mistral"
-        )
     }
 }

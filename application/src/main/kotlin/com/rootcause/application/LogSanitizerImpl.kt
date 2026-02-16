@@ -12,7 +12,7 @@ class DefaultLogSanitizer : LogSanitizer {
     override suspend fun sanitize(rawLogs: List<String>): List<SanitizedLog> {
         return rawLogs.map { line ->
             // For now, we wrap the raw string.
-            // Later, you can add Regex logic here to parse levels and timestamps.
+            // Later, I can add Regex logic here to parse levels and timestamps.
             SanitizedLog(
                 timestamp = Instant.now(),
                 level = detectLevel(line),
