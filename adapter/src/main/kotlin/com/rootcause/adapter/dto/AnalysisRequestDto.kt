@@ -1,4 +1,4 @@
-package com.rootcause.rootcauseanalysisagentservice.adapter.dto
+package com.rootcause.adapter.dto
 
 data class AnalysisRequestDto(
     val rawLogs: List<String>,

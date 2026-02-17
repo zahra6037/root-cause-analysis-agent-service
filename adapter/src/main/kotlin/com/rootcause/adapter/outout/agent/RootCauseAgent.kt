@@ -1,4 +1,4 @@
-package com.rootcause.rootcauseanalysisagentservice.adapter.output.ai.agent
+package com.rootcause.adapter.outout.agent
 
 import com.rootcause.domain.model.AgentAnalysisResponse
 import dev.langchain4j.service.SystemMessage

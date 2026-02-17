@@ -3,7 +3,7 @@ package com.rootcause.adapter.input.web
 import com.rootcause.application.RootCauseAnalysisManager
 import com.rootcause.domain.model.AIAnalysisResult
 import com.rootcause.domain.model.IncidentCategory
-import com.rootcause.rootcauseanalysisagentservice.adapter.dto.AnalysisRequestDto
+import com.rootcause.adapter.dto.AnalysisRequestDto
 import org.springframework.web.bind.annotation.*
 
 

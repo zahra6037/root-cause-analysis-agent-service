@@ -1,9 +1,8 @@
-package com.rootcause.rootcauseanalysisagentservice.adapter.output.ai
+package com.rootcause.adapter.outout.agent
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.rootcause.domain.AIAgentPort
 import com.rootcause.domain.model.*
-import com.rootcause.rootcauseanalysisagentservice.adapter.output.ai.agent.RootCauseAgent
 import org.springframework.stereotype.Component
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext

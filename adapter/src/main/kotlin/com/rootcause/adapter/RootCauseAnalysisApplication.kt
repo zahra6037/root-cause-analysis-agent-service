@@ -1,9 +1,9 @@
-package com.rootcause.rootcauseanalysisagentservice.adapter
+package com.rootcause.adapter
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
-// Explicitly scan the base package so it finds the Controller, Manager, and Sanitizer
+// Explicitly scan the base package, so it finds the Controller, Manager, and Sanitizer
 @SpringBootApplication(scanBasePackages = ["com.rootcause"])
 class RootCauseAnalysisApplication
 

@@ -1,7 +1,7 @@
-package com.rootcause.rootcauseanalysisagentservice.adapter.config
+package com.rootcause.adapter.config
 
-import com.rootcause.rootcauseanalysisagentservice.adapter.output.ai.agent.RootCauseAgent
-import com.rootcause.rootcauseanalysisagentservice.adapter.output.ai.tools.LogAnalysisTools
+import com.rootcause.adapter.outout.agent.LogAnalysisTools
+import com.rootcause.adapter.outout.agent.RootCauseAgent
 import dev.langchain4j.memory.chat.MessageWindowChatMemory
 import dev.langchain4j.model.chat.ChatLanguageModel
 import dev.langchain4j.service.AiServices

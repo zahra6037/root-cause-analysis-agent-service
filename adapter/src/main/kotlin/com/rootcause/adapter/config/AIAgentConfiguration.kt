@@ -1,4 +1,4 @@
-package com.rootcause.rootcauseanalysisagentservice.adapter.config
+package com.rootcause.adapter.config
 
 import org.springframework.boot.context.properties.ConfigurationProperties
 

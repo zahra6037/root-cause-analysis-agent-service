@@ -1,4 +1,4 @@
-package com.rootcause.rootcauseanalysisagentservice.adapter.output.ai.tools
+package com.rootcause.adapter.outout.agent
 
 import com.rootcause.domain.model.IncidentCategory
 import com.rootcause.domain.model.LogLevel
@@ -6,7 +6,6 @@ import com.rootcause.domain.model.SanitizedLog
 import dev.langchain4j.agent.tool.Tool
 import org.springframework.stereotype.Component
 import java.time.Duration
-import java.time.Instant
 
 /**
  * Tools that AI agents can use to analyze logs.
