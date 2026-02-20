@@ -22,7 +22,7 @@ class LangChain4jAgentAdapter(
 
         val formattedLogs = formatLogsForAgent(logs)
 
-        // Call the AI agent (blocking call, so we use Dispatchers.IO)
+        // Call the AI agent (blocking call, so I use Dispatchers.IO)
         val response = rootCauseAgent.analyzeIncident(
             suspectedCategory = suspectedCategory.name,
             context = context ?: "No additional context provided",

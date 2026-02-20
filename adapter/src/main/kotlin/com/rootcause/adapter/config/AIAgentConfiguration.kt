@@ -2,7 +2,6 @@ package com.rootcause.adapter.config
 
 import org.springframework.boot.context.properties.ConfigurationProperties
 
-//Do NOT push the LLM configuration as "Hardcoded", let use confiug file
 @ConfigurationProperties(prefix = "ai")
 data class AIAgentConfiguration(
     val baseUrl: String,
